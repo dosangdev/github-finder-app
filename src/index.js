@@ -1,5 +1,7 @@
 import { $ } from "./dom.js";
 
+const userWrapper = $(".user__info__wrapper");
+const userRepoWrapper = $(".user__repos__wrapper");
 const userImg = $(".avatar");
 const reposCount = $(".repos__count");
 const gistsCount = $(".gists__count");
@@ -12,6 +14,7 @@ const userSince = $(".user__since");
 const userPageBtn = $(".view__profile__btn");
 const repoListContainer = $("#repoList");
 const repoTemplate = $("#repoTemplate");
+const noneUser = $("#none__user");
 
 class UserInfo {
   constructor() {
@@ -28,12 +31,17 @@ class UserInfo {
     this.blog = "";
     this.html_url = "";
     this.repos_url = [];
+    this.searchInput = $("#search__input");
   }
 
   async fetchData() {
     try {
       const res = await fetch(this.url);
       const data = await res.json();
+
+      noneUser.style.display = "none";
+      userWrapper.style.display = "block";
+      userRepoWrapper.style.display = "block";
 
       this.avatar_url = data.avatar_url;
       this.public_repos = data.public_repos;
@@ -53,7 +61,11 @@ class UserInfo {
 
       this.displayData();
     } catch (err) {
-      console.log(err);
+      noneUser.style.display = "block";
+      userWrapper.style.display = "none";
+      userRepoWrapper.style.display = "none";
+
+      noneUser.textContent = `${this.searchInput.value} did not match any user.`;
     }
   }
 

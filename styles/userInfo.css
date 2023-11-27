@@ -1,3 +1,10 @@
+#none__user {
+  display: none;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 25px;
+}
+
 .user__info__wrapper {
   border: 1px solid var(--border);
   margin-top: 20px;

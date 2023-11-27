@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/repos.css" />
     <link rel="stylesheet" href="./styles/userInfo.css" />
     <script src="./src/index.js" defer type="module"></script>
-    <title>Document</title>
+    <title>GitHub Finder App</title>
   </head>
   <body>
     <header>
@@ -22,7 +22,9 @@
         </p>
         <input id="search__input" type="text" placeholder="Search" />
       </div>
+
       <!-- infoWrapper -->
+      <div id="none__user"></div>
       <div class="user__info__wrapper">
         <div class="user__info__inner__wrapper">
           <div class="info__sort__box">
@@ -32,15 +34,15 @@
             <div class="user__info__right__wrapper">
               <div class="user__count__wrapper">
                 <span class="count repos__count"></span>
-                <span class="count gists__count">Public Gists:</span>
-                <span class="count followers__count">Followers:</span>
-                <span class="count following__count">Following:</span>
+                <span class="count gists__count">Public Gists: null</span>
+                <span class="count followers__count">Followers: null</span>
+                <span class="count following__count">Following: null</span>
               </div>
               <div class="additional__info__wrapper">
-                <div class="additional user__company">Company:</div>
-                <div class="additional user__blog">Website/Blog:</div>
-                <div class="additional user__location">Location:</div>
-                <div class="additional user__since">Member Since:</div>
+                <div class="additional user__company">Company: null</div>
+                <div class="additional user__blog">Website/Blog: null</div>
+                <div class="additional user__location">Location: null</div>
+                <div class="additional user__since">Member Since: null</div>
               </div>
             </div>
           </div>
