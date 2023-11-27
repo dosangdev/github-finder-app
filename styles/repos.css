@@ -14,22 +14,6 @@
   margin-bottom: 21px;
 }
 
-.repo1 {
-  /* display: none; */
-}
-.repo2 {
-  display: none;
-}
-.repo3 {
-  display: none;
-}
-.repo4 {
-  display: none;
-}
-.repo5 {
-  display: none;
-}
-
 .repo__item {
   display: flex;
   flex-direction: row;

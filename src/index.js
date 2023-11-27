@@ -10,7 +10,6 @@ const userBlog = $(".user__blog");
 const userLocation = $(".user__location");
 const userSince = $(".user__since");
 const userPageBtn = $(".view__profile__btn");
-//
 const repoListContainer = $("#repoList");
 const repoTemplate = $("#repoTemplate");
 
@@ -84,7 +83,6 @@ class UserInfo {
 
       repoListContainer.appendChild(repoClone);
     });
-    //
     userImg.src = this.avatar_url;
     reposCount.textContent = `Public Repos: ${this.public_repos}`;
     gistsCount.textContent = `Public Gists: ${this.public_gists}`;
