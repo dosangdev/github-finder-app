@@ -1,0 +1,10 @@
+header {
+  background-color: var(--primary);
+  height: 50px;
+}
+
+.header__inner__wrapper {
+  color: #ffffff;
+  font-size: 24px;
+  padding: 15px;
+}

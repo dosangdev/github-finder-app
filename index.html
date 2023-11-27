@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/repos.css" />
+    <link rel="stylesheet" href="./styles/userInfo.css" />
+    <script src="./src/index.js" defer type="module"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__inner__wrapper">GiHub Finder</div>
+    </header>
+    <main>
+      <div class="search__wrapper">
+        <p id="search__info__text">Search GitHub Users</p>
+        <p id="how__to__search">
+          Enter a username to fetch a user profile and repos
+        </p>
+        <input id="search__input" type="text" placeholder="Search" />
+      </div>
+      <!-- infoWrapper -->
+      <div class="user__info__wrapper">
+        <div class="user__info__inner__wrapper">
+          <div class="info__sort__box">
+            <div class="user__img__wrapper">
+              <img class="avatar" alt="user img" />
+            </div>
+            <div class="user__info__right__wrapper">
+              <div class="user__count__wrapper">
+                <span class="count repos__count"></span>
+                <span class="count gists__count">Public Gists:</span>
+                <span class="count followers__count">Followers:</span>
+                <span class="count following__count">Following:</span>
+              </div>
+              <div class="additional__info__wrapper">
+                <div class="additional user__company">Company:</div>
+                <div class="additional user__blog">Website/Blog:</div>
+                <div class="additional user__location">Location:</div>
+                <div class="additional user__since">Member Since:</div>
+              </div>
+            </div>
+          </div>
+          <button class="view__profile__btn">View Profile</button>
+        </div>
+      </div>
+
+      <!-- userRepos -->
+      <div class="user__repos__wrapper">
+        <p class="user__repos__title">Latest Repos</p>
+        <div id="repoList" class="repo__list"></div>
+
+        <!-- 레포템플릿 -->
+        <template id="repoTemplate">
+          <div class="repo__inner__wrapper">
+            <div class="repo__item">
+              <div class="repo__title"></div>
+              <div class="repo__info__wrapper">
+                <span class="repo__info stars"></span>
+                <span class="repo__info watchers"></span>
+                <span class="repo__info fork"></span>
+              </div>
+            </div>
+          </div>
+        </template>
+        <!-- <div class="repo__inner__wrapper repo2">
+          <div class="repo__item">
+            <div class="repo__title"></div>
+            <div class="repo__info__wrapper">
+              <span class="repo__info stars"></span>
+              <span class="repo__info watchers"></span>
+              <span class="repo__info fork"></span>
+            </div>
+          </div>
+        </div>
+        <div class="repo__inner__wrapper repo3">
+          <div class="repo__item">
+            <div class="repo__title"></div>
+            <div class="repo__info__wrapper">
+              <span class="repo__info stars"></span>
+              <span class="repo__info watchers"></span>
+              <span class="repo__info fork"></span>
+            </div>
+          </div>
+        </div>
+        <div class="repo__inner__wrapper repo4">
+          <div class="repo__item">
+            <div class="repo__title"></div>
+            <div class="repo__info__wrapper">
+              <span class="repo__info stars"></span>
+              <span class="repo__info watchers"></span>
+              <span class="repo__info fork"></span>
+            </div>
+          </div>
+        </div>
+        <div class="repo__inner__wrapper repo5">
+          <div class="repo__item">
+            <div class="repo__title"></div>
+            <div class="repo__info__wrapper">
+              <span class="repo__info stars"></span>
+              <span class="repo__info watchers"></span>
+              <span class="repo__info fork"></span>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </main>
+    <footer>
+      <p>GitHub Finder&copy;</p>
+    </footer>
+  </body>
+</html>
